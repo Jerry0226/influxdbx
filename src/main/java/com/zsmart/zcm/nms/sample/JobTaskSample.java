@@ -42,7 +42,7 @@ public class JobTaskSample {
         DateTime endTime = DateTime.now();
 
         syncProperties.setEndTime(endTime);
-        DateTime startTime = endTime.withMillis(endTime.getMillis() - 1 * 60 * 1000);
+        DateTime startTime = endTime.withMillis(endTime.getMillis() - 2 * 60 * 60 * 1000);
         syncProperties.setStartTime(startTime);
 
         System.out.println(JSON.toJSONString(syncProperties, SerializerFeature.PrettyFormat, SerializerFeature.WriteMapNullValue,

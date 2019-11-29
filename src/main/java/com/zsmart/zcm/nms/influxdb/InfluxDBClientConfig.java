@@ -190,9 +190,6 @@ public class InfluxDBClientConfig implements Serializable {
 
             Preconditions.checkArgument(!Strings.isNullOrEmpty(influxDBUrl), "influxDBUrl must not be null or empty.");
 
-            Preconditions.checkArgument(!Strings.isNullOrEmpty(database), "database must not be null or empty.");
-
-            Preconditions.checkArgument(!Strings.isNullOrEmpty(rp), "retention policies must not be null or empty.");
 
             InfluxDBClientConfig config = new InfluxDBClientConfig();
             config.influxdbBatchEnabled = this.influxdbBatchEnabled;

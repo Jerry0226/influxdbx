@@ -25,7 +25,7 @@ public class InfluxdbCommand {
     public String init(@ShellOption("--url") String influxDBUrl, @ShellOption(value = "--user", defaultValue = "")String influxDBUser,
                                @ShellOption(value = "--password", defaultValue = "")String influxDBPassword) {
 
-        InfluxDB inlfuxDB = InfluxDBUtil.getInfluxDB(InfluxDBClientConfig.influxDBUrl(influxDBUrl, influxDBUser, influxDBPassword).build());
+        inlfuxDB = InfluxDBUtil.getInfluxDB(InfluxDBClientConfig.influxDBUrl(influxDBUrl, influxDBUser, influxDBPassword).build());
 
         return inlfuxDB.toString();
     }
@@ -62,7 +62,7 @@ public class InfluxdbCommand {
             return  "Please initialize first";
         }
 
-        QueryResult result = inlfuxDB.query(new Query("show MEASUREMENTS", "_internal"));
+        QueryResult result = inlfuxDB.query(new Query("show MEASUREMENTS", this.database));
         String resultJson = JSON.toJSONString(result, SerializerFeature.PrettyFormat, SerializerFeature.WriteMapNullValue,
                 SerializerFeature.WriteDateUseDateFormat);
         return resultJson;
@@ -73,6 +73,7 @@ public class InfluxdbCommand {
     public String reset() {
 
         if (inlfuxDB != null) {
+            this.database = "_internal";
             inlfuxDB.close();
         }
         return "reset success";
