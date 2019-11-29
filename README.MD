@@ -75,3 +75,24 @@ Influxdb Command
 | destClient | 数据迁移迁移的目标数据库 |
 
 
+#### 执行输出
+
+```
+JobTask[ 2019-11-29 13:36:06,2019-11-29 13:36:16] syncSuccessCount: 1273 syncFailCount: 0
+JobTask[ 2019-11-29 13:35:33,2019-11-29 13:35:43] syncSuccessCount: 1165 syncFailCount: 0
+JobTask[ 2019-11-29 13:36:28,2019-11-29 13:36:38] syncSuccessCount: 1189 syncFailCount: 0
+JobTask[ 2019-11-29 13:37:23,2019-11-29 13:37:33] syncSuccessCount: 1322 syncFailCount: 0
+JobTask[ 2019-11-29 13:36:50,2019-11-29 13:37:00] syncSuccessCount: 1439 syncFailCount: 0
+JobTask[ 2019-11-29 13:36:39,2019-11-29 13:36:49] syncSuccessCount: 1261 syncFailCount: 0
+JobTask[ 2019-11-29 13:36:17,2019-11-29 13:36:27] syncSuccessCount: 1404 syncFailCount: 0
+JobTask[ 2019-11-29 13:38:07,2019-11-29 13:38:17] syncSuccessCount: 1236 syncFailCount: 0
+JobTask[ 2019-11-29 13:37:01,2019-11-29 13:37:11] syncSuccessCount: 1213 syncFailCount: 0
+JobTask[ 2019-11-29 13:37:45,2019-11-29 13:37:55] syncSuccessCount: 1497 syncFailCount: 0
+JobTask[ 2019-11-29 13:37:12,2019-11-29 13:37:22] syncSuccessCount: 1323 syncFailCount: 0
+JobTask[ 2019-11-29 13:37:34,2019-11-29 13:37:44] syncSuccessCount: 1231 syncFailCount: 0
+JobTask[ 2019-11-29 13:37:56,2019-11-29 13:38:06] syncSuccessCount: 1180 syncFailCount: 0
+Sync complete SyncStats {startTime=2019-11-29T13:38:13.385+08:00, endTime=2019-11-29T13:40:48.421+08:00 duration(s): 155, jobCount=655, syncSuccessCount=857196, syncFailCount=0}
+
+
+```
+
